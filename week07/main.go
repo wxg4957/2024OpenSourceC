@@ -24,17 +24,18 @@ func main() {
 	fmt.Println(armyFixed.Replace(army)) */
 
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("input your score: ")
+	fmt.Print("점수 입력: ")
 	input, err := reader.ReadString('\n')
 	if err != nil {
 		log.Fatal(err)
 	}
 	input = strings.TrimSpace(input)            //역슬래시 부분 제거, strip과 유사
-	score, _ := strconv.ParseInt(input, 16, 32) //16진수 정수형 32비트
+	score, _ := strconv.ParseInt(input, 10, 32) //10진수 정수형 32비트
+	var grade string
 	if score >= 60 {
-		fmt.Println("A")
-		fmt.Println(score)
+		grade = "A"
 	} else {
-		fmt.Println("BCDF")
+		grade = "BCDF"
 	}
+	fmt.Printf("%d점은 %s등급 입니다.", score, grade)
 }
