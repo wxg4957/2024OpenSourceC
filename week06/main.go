@@ -25,5 +25,5 @@ func main() {
 	fmt.Printf("%f%t%s%d\n", f, b, s, i) // zero value
 	f = 2.7
 	i = 3
-	fmt.Print("\n", f < float64(i), "\n")
+	fmt.Print("\n", f < float64(i), "\n") // True or False
 }
