@@ -30,6 +30,7 @@ func main() {
 		for j < n {
 			if n%j == 0 {
 				isPrime = false
+				break
 			}
 			j++
 		}
