@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
+	var emptySlice []bool
+	// emptySlice = make([]bool, 5)
+	fmt.Printf("%#v\n", emptySlice)
+
 	var myArray [5]float64 = [5]float64{3.5, 4.1, 4.5, 2.9, 3.7}
 	mySlice := myArray[0:3]
 
